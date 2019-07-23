@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="myFirstCtrl.js"></script>
+
+</head>
+<body >
+
+    <div ng-controller="myFirstCtrl">
+            <h1>Clock</h1>
+            <h1>{{time}}</h1>
+            <button ng-click="increaseTime()">Click to increase time</button>
+    </div>
+    <br>
+    <div ng-controller="myFirstCtrl">           
+            <h1>{{"name "+name}}</h1>
+            <button ng-click="reverseName()">click to reverse Name</button>
+    </div>
+
+    <div ng-controller="myFirstCtrl">
+            <p>Name : <input type="text" ng-model="person.name"></p>
+            <p>Age  : <input type="number" ng-model="person.age"></p>
+            <p>Password  : <input type="password" ng-model="person.password"></p>
+        <input type="radio" ng-model="person.gender" value="male"> Male<br>
+        <input type="radio" ng-model="person.gender" value="female"> Female<br>
+        <input type="radio" ng-model="person.gender" value="other"> Other
+        <br><br>
+        <select ng-model="person.car">
+                <option value="volvo">Volvo</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+              </select>
+              <br>
+        
+        <br>
+        <input type="checkbox" ng-model="person.bike" value="Bike"> I have a bike<br>
+        <br>        
+        <pr>Person = {{person | json}}</pr>
+    </div>
+</body>
+</html>
